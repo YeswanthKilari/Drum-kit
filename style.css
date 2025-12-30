@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #000;
+    color: white;
+}
+
+.keys{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.key{
+    border: 1px solid red;
+    padding: auto;
+    margin: auto;
+    width: 60px;
+    transition: all 0.07s ease;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 24px;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    margin: 10px;
+    border-radius: 10px;
+    /* background: #222; */
+    box-shadow: 0 5px 0 #555;
+}
+
+.playing{
+    transform: scale(0.9);
+    box-shadow: 0 2px 0 #555;
+    background: #444;
+}
+
+.sound{
+    display: none;
+}
