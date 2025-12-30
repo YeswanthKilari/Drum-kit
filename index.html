@@ -50,6 +50,11 @@
             <kbd>;</kbd>
             <span class="sound">cine</span>
         </div>
+
+        <div data-key="stop" class="key">
+            <kbd>Stop</kbd>
+            <span style="font-family: Arial, Helvetica, sans-serif; font-size: 40px" class="sound">Stop</span>  
+        </div>
     </div>
     <audio data-key="65" src="assests/65.wav"></audio>
     <audio data-key="83" src="assests/68.wav"></audio>
@@ -75,6 +80,14 @@
             key.classList.add('playing');
         }
 
+        stopButton = document.querySelector('.key[data-key="stop"]');
+        stopButton.addEventListener('click', () => {
+            const audios = document.querySelectorAll('audio');
+            audios.forEach(audio => {
+                audio.pause();
+                audio.currentTime = 0;
+            });
+        });
 
         function removeTransition(e) {
             if (e.propertyName !== 'transform') return; 
